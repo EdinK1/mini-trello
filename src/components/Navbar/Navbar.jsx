@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { FaMoon } from 'react-icons/fa'
 
 let StyledNavbar = styled.header({
   background: 'linear-gradient(135deg, #0079bf,#5067c5)',
@@ -11,7 +12,8 @@ let StyledNavbar = styled.header({
 })
 
 let StyledHeading = styled.h2({
-  cursor: 'pointer'
+  cursor: 'pointer',
+  fontWeight: '200'
 })
 
 let StyledLinks = styled.ul({
@@ -20,7 +22,7 @@ let StyledLinks = styled.ul({
 })
 
 let StyledLink = styled.li({
-  padding: '0 1rem',
+  padding: '0 0.75rem',
   fontWeight: '800',
   cursor: 'pointer'
 })
@@ -32,6 +34,7 @@ const Navbar = () => {
       <StyledLinks>
         <StyledLink>Home</StyledLink>
         <StyledLink>About</StyledLink>
+        <FaMoon style={{ marginLeft: '0.75rem' }} />
       </StyledLinks>
     </StyledNavbar>
   )
