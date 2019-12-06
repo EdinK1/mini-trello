@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { FaMoon } from 'react-icons/fa'
+import { Link } from '@reach/router'
 
 let StyledNavbar = styled.header({
   background: 'linear-gradient(135deg, #0079bf,#5067c5)',
@@ -12,30 +13,43 @@ let StyledNavbar = styled.header({
 })
 
 let StyledHeading = styled.h2({
-  cursor: 'pointer',
   fontWeight: '200'
 })
 
-let StyledLinks = styled.ul({
+let StyledList = styled.ul({
   listStyleType: 'none',
   display: 'flex'
 })
 
-let StyledLink = styled.li({
-  padding: '0 0.75rem',
+let StyledListItem = styled.li({
+  padding: '0 0.75rem'
+})
+
+let StyledLink = styled(Link)({
+  textDecoration: 'none',
   fontWeight: '800',
-  cursor: 'pointer'
+  color: '#fff',
+  transition: '0.3s all ease-in',
+  [`:hover`]: {
+    color: '#f4f4f4'
+  }
 })
 
 const Navbar = () => {
   return (
     <StyledNavbar>
-      <StyledHeading>MiniTrello</StyledHeading>
-      <StyledLinks>
-        <StyledLink>Home</StyledLink>
-        <StyledLink>About</StyledLink>
+      <StyledHeading>
+        <StyledLink to='/'>MiniTrello</StyledLink>
+      </StyledHeading>
+      <StyledList>
+        <StyledListItem>
+          <StyledLink to='/'>Home</StyledLink>
+        </StyledListItem>
+        <StyledListItem>
+          <StyledLink to='/about'>About</StyledLink>
+        </StyledListItem>
         <FaMoon style={{ marginLeft: '0.75rem' }} />
-      </StyledLinks>
+      </StyledList>
     </StyledNavbar>
   )
 }

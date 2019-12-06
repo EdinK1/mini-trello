@@ -9,9 +9,6 @@ const App = () => {
     <div className='App'>
       <Header />
       <Router />
-      <Layout>
-        <div>heyo</div>
-      </Layout>
     </div>
   )
 }

@@ -5,7 +5,7 @@ import About from '../pages/About/About'
 
 const Routes = () => (
   <Router>
-    <Home path='/welcome' />
+    <Home path='/' />
     <About path='/about' />
   </Router>
 )
